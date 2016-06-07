@@ -43,125 +43,117 @@
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" type="text/css" href="css/iconos.css" media="screen,projection">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen,projection">
-  
+    <style type="text/css">
+    .card p{
+      text-align: justify;
+    }
+    .card{
+      height: 130px;
+    }
+    </style>
+    <script type="text/javascript">
+      function salir(){
+        navigator.app.exitApp();
+      }
+    </script>
   
 </head>
 
 <body ng-app="appTBM" ng-controller="appController">
-     <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">TBM</a>
+     <nav class="teal darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">EnergyApp</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Recomendaciones</a></li>
-        <li><a href="#">Bajar de peso</a></li>
-        <li><a href="#">Mantener peso</a></li>
-        <li><a href="#">Subir Masa muscular</a></li>
+        <!--<li><a href="recomendaciones.html">Recomendaciones</a></li>-->
+        <li><a href="TBM.html">Calculo de la TMB</a></li>
+        <li><a href="macronutrientes.html">Recomendaciones</a></li>
+        <li><a href="alimentacion.html">Alimentación<i class="material-icons"></i></a></li>
+       
+        <li><a onclick="salir()" class="collapsible-header">Salir<i class="material-icons">exit_to_app</i></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
+    <div class="container" id="contenedor">
         <div class="row">
-            <div class="input-field col s8 offset-s2">
-              <input  id="first_name2" type="text" class="validate" ng-model="peso">
-              <label class="active" for="first_name2">Peso(kg)</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s8 offset-s2">
-              <input  id="first_name2" type="text" class="validate" ng-model="altura">
-              <label class="active" for="first_name2">Altura(cm)</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s8 offset-s2">
-              <input  id="first_name2" type="text" class="validate" ng-model="edad">
-              <label class="active" for="first_name2">Edad(años)</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s10 offset-s1">
-              <p>Sexo</p>
-              <input name="group1" type="radio" id="test1" />
-              <label for="test1">Masculino</label>
-              <input name="group1" type="radio" id="test2" />
-              <label for="test2">Femenino</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s10 offset-s1">
-                <p>Actividad fisica</p>
-                <select>
-                  <option value="sedentaria"  selected>Sedentaria</option>
-                  <option value="1">Ligeramente activa</option>
-                  <option value="2">Moderadamente activa</option>
-                  <option value="3">Muy activa</option>
-                  <option value="3">Extremadamente activa</option>
-                </select>
-                <label>Materialize Select</label>
-            </div>
-        </div>
-
-        <div class="row center">
-        <a class="btn-large waves-effect waves-light mybtnstyle" ng-click="calcularTBM()">Calcular</a>
-      </div>
-      <!--
-      <div class="row">
-        <div class="col s12 ">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title" style="font-size: 20px;">Tasa Metabólica Basal</span>
-              <p>1,490.00</p>
+          <div class="col s12">
+            <div class="card">
+              <!--<div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>-->
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Tasa Metabólica Basal<i class="material-icons right">more_vert</i></span>
+                <p><a href="TBM.html"><i class="material-icons"></i>Calcular</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
+                <p>En un adulto, la tasa metabólica basal (TMB) es la cantidad de las calorías diarias necesarias para mantener las funciones básicas de su cuerpo.</p>
+              </div>
             </div>
           </div>
+
+          
         </div>
-      </div>-->
-      <!--
-      <div class="row">
-        <div class="col s12 ">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title" style="font-size: 20px;">Calorías diarias necesarias</span>
-              <p>{{calorias}}</p>
+
+
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <!--<div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>-->
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Macronutrientes<i class="material-icons right">more_vert</i></span>
+                <p><a href="macronutrientes.html"><i class="material-icons"></i>Ver</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
+                <p>
+                Los macronutrientes son nutrientes que aportan calorías (energía). Los nutrientes son sustancias necesarias para el crecimiento, el metabolismo y otras funciones.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>-->
 
+          
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <!--<div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>-->
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Alimentación<i class="material-icons right">more_vert</i></span>
+                <p><a href="alimentacion.html"><i class="material-icons left">room_service</i>Entrar</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
+                <p>Una buena alimentación es el secreto para mantener una buena salud y verse bien esteticamente.</p>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
       
-    
-    <!--
-      <br><br>
-      <h1 class="header center orange-text">Ediel ssss</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>-->
 
     </div>
   </div>
 
+  <!--Vista de el calculo basal-->
+
+
+  <!--***********************************-->
+
 
   
-  <!--
-  <footer class="page-footer orange">
-    
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Ediel M. V.</a>
-      </div>
-    </div>
-  </footer>-->
+ 
 
     <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
