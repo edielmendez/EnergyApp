@@ -47,13 +47,19 @@
     .card p{
       text-align: justify;
     }
+    .desayuno{
+      font-size: 13pt;
+    }
+    .chip{
+      margin: 5px;
+    }
     </style>
   
 </head>
 
 <body ng-app="appTBM" ng-controller="appController">
      <nav class="teal darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Alimentación</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Menús</a>
     
       
       <a href="index.html" class="waves-effect waves-blue"><i class="material-icons">arrow_back</i></a>
@@ -67,98 +73,274 @@
     <div class="container" id="contenedor">
         <div class="row">
           <div class="col s12">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/huevo.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Huevo<i class="material-icons right">more_vert</i></span>
-                <!--<p><a><i class="material-icons"></i>Calcular</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Huevo<i class="material-icons right">close</i></span>
-                <p><strong>Tipo : </strong> Hervido</p>
-                <p><strong>Cantidad: </strong>1 huevo</p>
-                <p><strong>Proteina : </strong> 13g.</p>
-                <p><strong>Grasas : </strong> 11g.</p>
-                <p><strong>Hidratos de carbono : </strong> 1.1g.</p>
-                <p><strong>Calorias Totales :</strong> 155 </p>
+            <ul class="tabs">
+              <li class="tab col s4"><a class="active" href="#test1">Desayunos</a></li>
+              <li class="tab col s4"><a  href="#test2">Comidas</a></li>
+              <li class="tab col s4 "><a href="#test3">Cenas</a></li>
+              
+            </ul>
+          </div>
+          <div id="test1" class="col s12">
+           
+            <div class="row">
+              <div class="col s12">
+                <div class="card teal lighten-5 z-depth-2">
+                  <div class="card-content">
+                    <!--<h5>Opción 1</h5>-->
+                    <p class="desayuno">1 taza de café</p>
+                    <div class="chip">
+                      66 Kcal.
+                    </div>
+                    
+                    <div class="chip">
+                      1.9g de grasa
+                    </div>
+
+                    <div class="chip">
+                      12.23g de carbohidratos
+                    </div>
+
+                    <div class="chip">
+                      0.5g de proteína
+                    </div>
+                    
+                    
+                    <p class="desayuno">2 panes dulces</p>
+                    <div class="chip">
+                      246 Kcal.
+                    </div>
+                    <div class="chip">
+                      19.64g de grasa.
+                    </div>
+                    <div class="chip">
+                      62g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      7.5g de proteína.
+                    </div>
+
+                    <p class="desayuno">2 huevos revueltos</p>
+                    <div class="chip">
+                      202 Kcal.
+                    </div>
+                    <div class="chip">
+                      15g de grasa.
+                    </div>
+                    <div class="chip">
+                      2.8g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      13.6g de proteína.
+                    </div>
+                    
+                    
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div id="test2" class="col s12">
+            <!--<h5>Opción 1</h5>-->
+            <div class="row">
+              <div class="col s12">
+                <div class="card  z-depth-2">
+                  <div class="card-content">
+                    <!--<h5>Opción 1</h5>-->
+                    <p class="desayuno">3 Tortillas de maíz</p>
+                    <div class="chip">
+                      69 Kcal.
+                    </div>
+                    
+                    <div class="chip">
+                      0.9g de grasa
+                    </div>
+
+                    <div class="chip">
+                      15g de carbohidratos
+                    </div>
+
+                    <div class="chip">
+                      1.8g de proteína
+                    </div>
+                    
+                    
+                    <p class="desayuno">1 plato de pollo frito</p>
+                    <div class="chip">
+                      234 Kcal.
+                    </div>
+                    <div class="chip">
+                      9.3g de grasa.
+                    </div>
+                    <div class="chip">
+                      0g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      36g de proteína.
+                    </div>
+
+                    <p class="desayuno">1 vaso de agua de jamaica</p>
+                    <div class="chip">
+                      69 Kcal.
+                    </div>
+                    <div class="chip">
+                      0g de grasa.
+                    </div>
+                    <div class="chip">
+                      18g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      1g de proteína.
+                    </div>
+
+                    <p class="desayuno">Gelatina de postre</p>
+                    <div class="chip">
+                      149 Kcal.
+                    </div>
+                    <div class="chip">
+                      0g de grasa.
+                    </div>
+                    <div class="chip">
+                      34g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      3g de proteína.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="test3" class="col s12">
+            <div class="row">
+              <div class="col s12">
+                <div class="card  z-depth-2">
+                  <div class="card-content">
+                    <!--<h5>Opción 1</h5>-->
+                    <p class="desayuno">3 Tortillas de maíz</p>
+                    <div class="chip">
+                      69 Kcal.
+                    </div>
+                    
+                    <div class="chip">
+                      0.9g de grasa
+                    </div>
+
+                    <div class="chip">
+                      15g de carbohidratos
+                    </div>
+
+                    <div class="chip">
+                      1.8g de proteína
+                    </div>
+                    
+                    
+                    <p class="desayuno">Huevos con jamón</p>
+                    <div class="chip">
+                      138 Kcal.
+                    </div>
+                    <div class="chip">
+                      10g de grasa.
+                    </div>
+                    <div class="chip">
+                      1.2g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      11g de proteína.
+                    </div>
+
+                    <p class="desayuno">1 taza de atole</p>
+                    <div class="chip">
+                      209 Kcal.
+                    </div>
+                    <div class="chip">
+                      4g de grasa.
+                    </div>
+                    <div class="chip">
+                      40.5g de carbohidratos.
+                    </div>
+                    <div class="chip">
+                      5g de proteína.
+                    </div>
+
+                   
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!--<div class="row">
+          <div class="col m12">
+          <h4>Desayunos</h4> 
+         
+        
+
+            <ul class="collapsible " data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">bookmark</i>Opcion 1</div>
+                <div class="collapsible-body">
+                  
+                  <ul>
+                    <li>1 taza de cafe (240ml).</li>
+                  </ul>
+                  
+                  2 panes dulces
+                 
+                </div>
+              </li>
+              
+            </ul>
+         
+          
+           <ul class="collapsible " data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">bookmark</i>Opcion 2</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+              </li>
+              
+            </ul>
+          
+         
+            <ul class="collapsible " data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">bookmark</i>Opcion 3</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+              </li>
+              
+            </ul>
+          
           </div>
         </div>
 
         <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/leche.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Leche<i class="material-icons right">more_vert</i></span>
-                <!--<p><a><i class="material-icons"></i>Calcular</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Leche<i class="material-icons right">close</i></span>
-                <p><strong>Tipo : </strong> Leche en polvo</p>
-                <p><strong>Cantidad: </strong>100 gramos</p>
-                <p><strong>Proteina : </strong> 26 g.</p>
-                <p><strong>Grasas : </strong> 27 g.</p>
-                <p><strong>Hidratos de carbono : </strong> 38 g.</p>
-                <p><strong>Calorias Totales :</strong> 496 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/pollo.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Carde de pollo<i class="material-icons right">more_vert</i></span>
-                <!--<p><a><i class="material-icons"></i>Calcular</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Carne de pollo<i class="material-icons right">close</i></span>
+          <div class="col m12">
+            <h4>Comidas</h4>
+            <ul class="collapsible " data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">bookmark</i>Opcion 1</div>
+                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
                 
-                <p><strong>Cantidad: </strong>100 gramos.</p>
-                <p><strong>Proteina : </strong> 27 g.</p>
-                <p><strong>Grasas : </strong> 14 g.</p>
-                <p><strong>Hidratos de carbono : </strong> 0 g.</p>
-                <p><strong>Calorias Totales :</strong> 239 </p>
-              </div>
-            </div>
+            </ul>
           </div>
         </div>
 
         <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/pescado.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Pescado<i class="material-icons right">more_vert</i></span>
-                <!--<p><a><i class="material-icons"></i>Calcular</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Pescado<i class="material-icons right">close</i></span>
-                <!--<p><strong>Tipo : </strong> Hervido</p>-->
-                <p><strong>Cantidad: </strong>100 gramos</p>
-                <p><strong>Proteina : </strong> 25 g.</p>
-                <p><strong>Grasas : </strong> 11 g.</p>
-                <p><strong>Hidratos de carbono : </strong> 0 g.</p>
-                <p><strong>Calorias Totales :</strong> 208 </p>
-              </div>
-            </div>
+          <div class="col m12">
+          <h4>Cenas</h4>
+            <ul class="collapsible " data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">bookmark</i>Opcion 1</div>
+                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                
+            </ul>
           </div>
-        </div>
-
-
-
+        </div>-->
 
 
 
@@ -182,7 +364,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <!--<script type="text/javascript" src="js/script.js"></script>-->
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
 
    

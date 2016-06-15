@@ -6,6 +6,23 @@ app.controller('appController', function($scope, $http){
     $scope.TMB = 0;
     $scope.calcularTBM = function(){
 
+        if($scope.peso == undefined){
+            Materialize.toast("Introduzca su peso", 4000);
+            return;
+        }
+        if($scope.altura == undefined){
+            Materialize.toast("Introduzca su altura", 4000);
+            return;
+        }
+        if($scope.edad == undefined){
+            Materialize.toast("Introduzca su edad", 4000);
+            return;
+        }
+        if($scope.sexo == undefined){
+            Materialize.toast("Introduzca su sexo", 4000);
+            return;
+        }
+
         if($scope.actividad_fisica == undefined){
             Materialize.toast("Seleccione su actividad física", 4000)
         }else{
