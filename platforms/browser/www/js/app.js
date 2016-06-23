@@ -4,6 +4,41 @@ app.controller('appController', function($scope, $http){
     // more angular JS codes will be here
     $scope.calorias = 0;
     $scope.TMB = 0;
+    //$scope.alimentos = [];
+   
+    
+    $scope.alimentos = [
+        {
+            "nombre":"Huevo",
+            "tipo":"hervido",
+            "cantidad":"200g",
+            "proteina":"12",
+            "grasa":"23",
+            "carbohidratos":"23",
+            "calorias":"100",
+            "ruta":"img/huevo.jpg"
+
+        },
+        {
+            "nombre":"Leche",
+            "tipo":"hervido",
+            "cantidad":"200g",
+            "proteina":"12",
+            "grasa":"23",
+            "carbohidratos":"23",
+            "calorias":"100",
+            "ruta":"img/leche.jpg"
+
+        }
+
+    ];
+
+    //$scope.alimentos.push(obj);
+
+     
+
+    //console.log($scope.alimentos);
+
     $scope.calcularTBM = function(){
 
         if($scope.peso == undefined){
@@ -58,9 +93,11 @@ app.controller('appController', function($scope, $http){
     
 	}
 
-    /*$scope.getIndiceActividadFisica = function(){
-        switch($scope.actividad_fisica){
-            case 
-        }
-    }*/
+    $scope.clearSearch = function(){
+
+        //$("#search").val('');
+        
+    }
+
+
 });
