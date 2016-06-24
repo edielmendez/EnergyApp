@@ -2,7 +2,7 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>EnergyApp</name>
     <description>
-        Calculadora Basal y Recomdaciones de los macronutrientes.
+        Calculadora Basal y Recomendaciones de los macronutrientes.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         Ediel Mendez Vasquez
