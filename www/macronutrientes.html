@@ -79,9 +79,9 @@
 </div>
 
   <div class="section" id="index-banner">
-    <div class="container" id="contenedor" ng-repeat="d in alimentos | filter:search">
+    <div class="container" id="contenedor" >
       
-        <div class="row" >
+        <div class="row" ng-repeat="d in alimentos | filter:search">
           <div class="col s12">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
@@ -93,12 +93,12 @@
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{d.nombre}}<i class="material-icons right">close</i></span>
-                <p><strong></strong>{{d.tipo}}</p>
-                <p><strong></strong>{{d.cantidad}}</p>
-                <p><strong></strong> {{d.proteina}}</p>
-                <p><strong></strong> {{d.grasa}}</p>
-                <p><strong></strong> {{d.carbohidratos}}</p>
-                <p><strong></strong> {{d.calorias}} </p>
+                <p><strong>Tipo : </strong>{{d.tipo}}</p>
+                <p><strong>Catidad : </strong>{{d.cantidad}} g.</p>
+                <p><strong>Proteina : </strong> {{d.proteina}} g.</p>
+                <p><strong>Grasas : </strong> {{d.grasa}} g.</p>
+                <p><strong>Hidratos de carbono : </strong> {{d.carbohidratos}} g.</p>
+                <p><strong>Calorias Totales : </strong> {{d.calorias}} cal. </p>
               </div>
             </div>
           </div>

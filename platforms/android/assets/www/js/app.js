@@ -11,23 +11,67 @@ app.controller('appController', function($scope, $http){
         {
             "nombre":"Huevo",
             "tipo":"hervido",
-            "cantidad":"200g",
-            "proteina":"12",
-            "grasa":"23",
-            "carbohidratos":"23",
-            "calorias":"100",
+            "cantidad":"100",
+            "proteina":"13",
+            "grasa":"11",
+            "carbohidratos":"1.1",
+            "calorias":"155",
             "ruta":"img/huevo.jpg"
 
         },
         {
             "nombre":"Leche",
-            "tipo":"hervido",
-            "cantidad":"200g",
-            "proteina":"12",
-            "grasa":"23",
-            "carbohidratos":"23",
-            "calorias":"100",
+            "tipo":"Leche en polvo",
+            "cantidad":"100",
+            "proteina":"26",
+            "grasa":"27",
+            "carbohidratos":"38",
+            "calorias":"496",
             "ruta":"img/leche.jpg"
+
+        },
+        {
+            "nombre":"Carne de pescado",
+            "tipo":"N/A",
+            "cantidad":"100",
+            "proteina":"27",
+            "grasa":"14",
+            "carbohidratos":"0",
+            "calorias":"239",
+            "ruta":"img/pollo.jpg"
+
+        },
+        {
+            "nombre":"Carne de pescado",
+            "tipo":"N/A",
+            "cantidad":"100",
+            "proteina":"25",
+            "grasa":"11",
+            "carbohidratos":"0",
+            "calorias":"208",
+            "ruta":"img/pescado.jpg"
+
+        },
+        {
+            "nombre":"Carde de res",
+            "tipo":"N/A",
+            "cantidad":"100",
+            "proteina":"12",
+            "grasa":"27",
+            "carbohidratos":"2",
+            "calorias":"208",
+            "ruta":"img/res.jpg"
+
+        },
+        {
+            "nombre":"Lentejas",
+            "tipo":"Hervidas",
+            "cantidad":"100",
+            "proteina":"9",
+            "grasa":"0",
+            "carbohidratos":"20",
+            "calorias":"116",
+            "ruta":"img/lentejas.jpg"
 
         }
 
@@ -100,4 +144,10 @@ app.controller('appController', function($scope, $http){
     }
 
 
+});
+
+
+app.controller('SaveController', function($scope, $http){
+    $scope.calorias = localStorage.getItem("calorias");
+    $scope.TMB = localStorage.getItem("TMB");;
 });
